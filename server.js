@@ -1,6 +1,7 @@
 import express from "express";
 
 // utill
+import setupSwagger from "./config/swagger.js";
 import errorHandler from "./middlewares/errorHandler.js";
 import notFound from "./middlewares/notFound.js";
 
@@ -15,6 +16,9 @@ const listenPort = process.env.PORT ?? 8000;
 
 // routes
 app.use("/api/users", userRouter);
+
+// Setup Swagger
+setupSwagger(app);
 
 // custom error handler
 app.use(errorHandler);
