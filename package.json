@@ -1,0 +1,17 @@
+{
+  "name": "anygoserver",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch --env-file=config/.env server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.14.1"
+  }
+}
