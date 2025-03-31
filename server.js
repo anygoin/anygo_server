@@ -12,7 +12,8 @@ import userRouter from "./routes/users.js";
 const app = express();
 
 // env varaibles
-const listenPort = process.env.PORT ?? 8000;
+const listenPort = process.env.PORT ?? 5000;
+const host = process.env.HOST_EXTERNAL ?? "0.0.0.0";
 
 // routes
 app.use("/api/users", userRouter);
@@ -27,6 +28,6 @@ app.use(errorHandler);
 app.use(notFound);
 
 // server listner
-app.listen(listenPort, (err) => {
+app.listen(listenPort, host, () => {
   console.log(`Server running on port ${listenPort}`);
 });
