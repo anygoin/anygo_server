@@ -29,5 +29,5 @@ app.use(notFound);
 
 // server listner
 app.listen(listenPort, host, () => {
-  console.log(`Server running on port ${listenPort}`);
+  console.log(`Server running on port ${host}:${listenPort}`);
 });
